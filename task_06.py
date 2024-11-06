@@ -32,7 +32,7 @@ def rps_game_winner(players=None):
     if figure1 == figure2:
         return [player1, figure1]
     elif figure1 == 'R' and figure2 == 'S':
-        return [player2, figure2]
+        return [player1, figure1]
     elif figure1 == 'P' and figure2 == 'R':
         return [player1, figure1]
     elif figure1 == 'S' and figure2 == 'P':
