@@ -22,8 +22,12 @@ class Dessert:
     def set_calories(self, calories):
         self.calories = calories
 
+    # fixed: сравнение строки и числа
     def is_healthy(self):
-        return self.calories < 200
+        if isinstance(self.calories, (int, float)):
+            return self.calories < 200
+        else:
+            raise ValueError('Внимание! Калории должны быть числами!')
 
     def is_delicious(self):
         return True
@@ -35,5 +39,8 @@ class Dessert:
                 f'Вкусненько? {self.is_delicious()}.')
 
 
-print(Dessert("Печенька", 500))
-print(Dessert("Арбуз", 100))
+# print(Dessert("Печенька", 500))
+# print(Dessert("Арбуз", 100))
+# print(Dessert("Пиво", 6.78))
+# print(Dessert("Вода", 200.1))
+# print(Dessert("Печенька", "пятьсот"))
