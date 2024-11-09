@@ -22,6 +22,7 @@ def rps_game_winner(players=None):
         raise WrongNumberOfPlayersError("Нужно 2 игрока!")
 
     shown_fingers = {'R', 'P', 'S'}
+    game_winner = None
 
     player1, figure1 = players[0]
     player2, figure2 = players[1]
@@ -30,20 +31,22 @@ def rps_game_winner(players=None):
         raise NoSuchStrategyError("Себе такой палец покажи!")
 
     if figure1 == figure2:
-        return [player1, figure1]
+        game_winner = [player1, figure1]
     elif figure1 == 'R' and figure2 == 'S':
-        return [player1, figure1]
+        game_winner = [player1, figure1]
     elif figure1 == 'P' and figure2 == 'R':
-        return [player1, figure1]
+        game_winner = [player1, figure1]
     elif figure1 == 'S' and figure2 == 'P':
-        return [player1, figure1]
+        game_winner = [player1, figure1]
     else:
-        return [player2, figure2]
+        game_winner = [player2, figure2]
+
+    return f'{game_winner[0]} {game_winner[1]}'
 
 
-print(rps_game_winner([["player1", "P"], ["player2", "P"]]))
-print(rps_game_winner([["player1", "P"], ["player2", "R"]]))
-print(rps_game_winner([["player1", "P"], ["player2", "S"]]))
-print(rps_game_winner([["player1", "P"], ["player2", "P"]]))
-print(rps_game_winner([["player1", "P"], ["player2", "R"]]))
-print(rps_game_winner([["player1", "Z"], ["player2", "S"]]))
+# print(rps_game_winner([["player1", "P"], ["player2", "P"]]))
+# print(rps_game_winner([["player1", "P"], ["player2", "R"]]))
+# print(rps_game_winner([["player1", "P"], ["player2", "S"]]))
+# print(rps_game_winner([["player1", "P"], ["player2", "P"]]))
+# print(rps_game_winner([["player1", "P"], ["player2", "R"]]))
+# print(rps_game_winner([["player1", "Z"], ["player2", "S"]]))
