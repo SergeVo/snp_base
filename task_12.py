@@ -60,6 +60,6 @@ class JellyBean(Dessert):
 
 # print(Dessert("Печенька", 500))
 # print(Dessert("Арбуз", 100))
-# print(Jellybean("Арбуз", 100, "black licorice"))
-# print(Jellybean("Арбуз", 100, "просто сладкий"))
-# print(Jellybean("Пиво", "сто", "какой надо вкус!"))
+# print(JellyBean("Арбуз", 100, "black licorice"))
+# print(JellyBean("Арбуз", 100, "просто сладкий"))
+# print(JellyBean("Пиво", "сто", "какой надо вкус!"))

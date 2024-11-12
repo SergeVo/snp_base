@@ -27,7 +27,7 @@ class Dessert:
         if isinstance(self.calories, (int, float)):
             return self.calories < 200
         else:
-            raise ValueError('Внимание! Калории должны быть числами!')
+            return False
 
     def is_delicious(self):
         return True
