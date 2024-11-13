@@ -37,23 +37,23 @@ from task_11 import Dessert
 
 
 class JellyBean(Dessert):
-    def __init__(self, name=None, calories=None, flavour=None):
+    def __init__(self, name=None, calories=None, flavor=None):
         super().__init__(name, calories)
-        self.flavour = flavour
+        self.flavor = flavor
 
-    def get_flavour(self):
-        return self.flavour
+    def get_flavor(self):
+        return self.flavor
 
-    def set_flavour(self, flavour):
-        self.flavour = flavour
+    def set_flavor(self, flavor):
+        self.flavor = flavor
 
     def is_delicious(self):
-        return self.flavour != 'black licorice'
+        return self.flavor != 'black licorice'
 
     def __str__(self):
         return (f'Название: {self.name}; '
                 f'Калории: {self.calories}; '
-                f'Вкус: {self.flavour}; '
+                f'Вкус: {self.flavor}; '
                 f'Полезность: {self.is_healthy()}; '
                 f'Вкусненько? {self.is_delicious()}.')
 
